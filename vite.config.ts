@@ -11,4 +11,9 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  server: {
+    watch: {
+      ignored: ["**/server/**"], //server 폴더 이하 파일 감지 x
+    },
+  },
 });
