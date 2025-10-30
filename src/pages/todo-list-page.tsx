@@ -1,6 +1,6 @@
 import TodoEditor from "@/components/todo-list/todo-editor";
 import TodoItem from "@/components/todo-list/todo-item";
-import { useTodosData } from "@/hooks/queries/use-todos.data";
+import { useTodosData } from "@/hooks/queries/use-todos-data";
 export default function TodoListPage() {
   // const [todos, setTodos] = useState<Todo[]>([]);
   // const [isLoading, setIsLoading] = useState(false);
