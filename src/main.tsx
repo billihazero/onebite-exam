@@ -6,7 +6,14 @@ import { BrowserRouter } from "react-router";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
-const queryClient = new QueryClient(); //서버상태관리 하는 store
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: 300000,
+      gcTime: 5000,
+    },
+  },
+}); //서버상태관리 하는 store
 
 createRoot(document.getElementById("root")!).render(
   <BrowserRouter>
